@@ -1,0 +1,35 @@
+.works {
+  padding-bottom: var(--typical-padding);
+}
+
+.works__title {
+  margin-bottom: 50px;
+}
+
+.works__list {
+  display: flex;
+}
+
+.works__item {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.works__text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  @include font(14px, 700, 1.14, null);
+  // font-weight: 700;
+  // font-size: 14px;
+  // line-height: calc(16 / 14);
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
