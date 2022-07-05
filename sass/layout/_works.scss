@@ -1,5 +1,8 @@
 .works {
   padding-bottom: var(--typical-padding);
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
 }
 
 .works__title {

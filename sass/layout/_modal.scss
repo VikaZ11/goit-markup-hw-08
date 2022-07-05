@@ -9,8 +9,15 @@
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  width: calc(100% - 30px);
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
+   height: 609px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+    height: 581px;
+  }
   background-color: #ffffff;
   padding: 40px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -61,10 +68,10 @@
 }
 
 .modal__title {
-  @include font(20px, 700, 1.15, null);
-  // font-weight: 700;
-  // font-size: 20px;
-  // line-height: calc(23 / 20);
+  @include font(20px, 700, 1.5, null);
+  @media screen and (min-width: 1200px) {
+    @include font(20px, null, 1.15, null);
+  }
   text-align: center;
   color: var(--title-text-color);
   margin-bottom: 12px;
@@ -76,9 +83,6 @@
 
 .modal__label {
   @include font(12px, null, 1.17, 0.01em);
-  // font-size: 12px;
-  // line-height: calc(14 / 12);
-  // letter-spacing: 0.01em;
   color: #757575;
   margin-bottom: 4px;
   display: block;
@@ -120,9 +124,6 @@
   border-radius: 4px;
   resize: none;
   @include font(12px, null, 1.17, 0.01em);
-  // font-size: 12px;
-  // line-height: calc(14 / 12);
-  // letter-spacing: 0.01em;
   padding: 12px 16px;
   outline: none;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -131,17 +132,15 @@
   }
   &::placeholder {
     @include font(12px, null, 1.17, 0.01em);
-    // font-size: 12px;
-    // line-height: calc(14 / 12);
-    // letter-spacing: 0.01em;
     color: rgba(117, 117, 117, 0.5);
   }
 }
 
 .check__text {
-  @include font(14px, null, 1.71, null);
-  // font-size: 14px;
-  // line-height: 1.71;
+  @include font(12px, null, 1.17, null);
+  @media screen and (min-width: 1200px) {
+    @include font(14px, null, 1.71, null);
+  }
   color: #757575;
   display: flex;
   align-items: center;
@@ -149,7 +148,6 @@
 }
 
 .check__text-link {
-  margin-left: 4px;
   color: #2196f3;
 }
 
@@ -163,7 +161,7 @@
   align-items: center;
   justify-content: center;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   .check__input:focus + .check__text &,
   .check__input:hover + .check__text & {
     border-color: var(--accent-color);

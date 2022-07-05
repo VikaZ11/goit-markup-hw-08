@@ -1,10 +1,10 @@
 .logo {
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
-  @include font(26px, 700, 1.19, null);
-  // font-weight: 700;
-  // font-size: 26px;
-  // line-height: 1.19;
+  @include font(24px, 700, 1.17, null);
+  @media screen and (min-width: 1200px) {
+    @include font(26px, null, 1.19, null);
+  }
   &--dark {
     color: #000000;
   }

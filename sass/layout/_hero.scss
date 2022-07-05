@@ -4,26 +4,64 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../images/hero-bg.jpg);
+    url(../images/hero-bg-mob.jpg);
+  @include retina {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg-mob-2x.jpg);
+  } 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 200px 0;
+  padding: 118px 0;
+   @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg-tab.jpg);
+    @include retina {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg-tab-2x.jpg);
+  } 
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg.jpg);
+    @include retina {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero-bg-2x.jpg);
+  } 
+  }
   text-align: center;
 }
 
 .hero__title {
   color: #ffffff;
-  @include font(44px, 900, 1.36, 0.06em);
-  // font-weight: 900;
-  // font-size: 44px;
-  // line-height: 1.36;
+  @include font(26px, 900, 1.62, 0.06em);
+  @media screen and (min-width: 1200px) {
+    @include font(44px, null, 1.36, null);
+  }
   text-align: center;
-  // letter-spacing: 0.06em;
   text-transform: uppercase;
-  width: 696px;
+  max-width: 360px;
+  @media screen and (min-width: 1200px) {
+    max-width: 696px;
+  }
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
